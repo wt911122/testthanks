@@ -45,15 +45,9 @@ import { contents } from '../i18n';
       this['sceneA'] = true;
     },
     methods: {
-      touchstartHandler(e) {
-        console.log(e);
-        this.startY = e.changedTouches[0].pageY;
+      touchstartHandler() {
       },
-      touchendHandler(e){
-        let endY = e.changedTouches[0].pageY
-        if(this.startY - endY > 50){
-          this.$router.push('/sceneB')
-        }
+      touchendHandler(){
       },
       toDownload() {
         window.open('https://url.163.com/dwrj');

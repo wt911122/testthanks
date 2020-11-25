@@ -32,6 +32,19 @@ const routes = [
   },
 ]
 
-
-export default new VueRouter({mode: 'hash', routes});
+const router = new VueRouter({mode: 'hash', routes});
+const _push = router.push;
+router.push = (option, onComplete, onAbort) => {
+    // TODO 自动加上query
+    if(typeof option !== 'string')
+        option.query = Object.assign({}, router.currentRoute.query, option.query)
+    _push.apply(router, [option, onComplete, onAbort]);
+};
+const _replace = router.replace;
+router.replace = (option, onComplete, onAbort) => {
+    // TODO 自动加上query
+    option.query = Object.assign({}, router.currentRoute.query, option.query)
+    _replace.apply(router, [option, onComplete, onAbort]);
+};
+export default router;
 

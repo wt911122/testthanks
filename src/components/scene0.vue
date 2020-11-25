@@ -25,7 +25,7 @@
     watch: {
       percent(val) {
         if(val === 100){
-          this.$router.push(`/scene1`);
+          this.$router.push({ path:`/scene1` });
         }
       }
     },

@@ -34,7 +34,7 @@
             <div v-if="sharemodal" class="share-modal"
                 :style="`background-image: url(${require('../assets/scene4/bg.jpg')});`">
                 <a class="share-btn share-btn-branded share-btn-twitter"
-                    href="https://twitter.com/share?url=https%3A%2F%2Fgo.onelink.me%2FfaIR%2Fd588700"
+                    :href="`https://twitter.com/share?url=${currentUrl}`"
                     title="Share on Twitter">
                         <span class="share-btn-icon"></span>
                         <span class="share-btn-text">Twitter</span>
@@ -42,14 +42,14 @@
 
                 <!-- Icon-only Branded Facebook button -->
                 <a class="share-btn share-btn-branded share-btn-facebook"
-                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgo.onelink.me%2FfaIR%2Fd588700"
+                    :href="`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`"
                     title="Share on Facebook">
                         <span class="share-btn-icon"></span>
                         <span class="share-btn-text">Facebook</span>
                 </a>
 
                 <a class="share-btn share-btn-branded share-btn-line"
-                    href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fgo.onelink.me%2FfaIR%2Fd588700">
+                    :href="`https://social-plugins.line.me/lineit/share?url=${currentUrl}`">
                     <span class="share-btn-icon"></span>
                     <span class="share-btn-text">Line</span>
                 </a>
@@ -74,6 +74,13 @@ import { contents } from '../i18n';
       sceneContent: contents[window.locale].scene4,
       sharemodal: false,
     }),
+    computed: {
+        currentUrl(){
+            const query = this.$route.query;
+            const q = Object.keys(query).map(k => `${k}=${query[k]}`).join('&')
+            return window.encodeURIComponent(`${window.location.protocol}//${window.location.host}/#/?${q}`);
+        }
+    },
     mounted() {
       this['sceneA'] = true;
     },
@@ -85,7 +92,7 @@ import { contents } from '../i18n';
       touchendHandler(e){
         let endY = e.changedTouches[0].pageY
         if(this.startY - endY > 50){
-          this.$router.push('/sceneB')
+         this.$router.push({path: '/scene5'})
         }
       },
       toshare(){

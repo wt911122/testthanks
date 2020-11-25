@@ -1,37 +1,41 @@
 // const lang = process.env.lang;
-const metas = {
-    ja: {
-        site: 'https://go.onelink.me/faIR/d588700',
-        title: '第五人格 感謝祭イベント',
-        description: '',
-        image: '',
-    },
-    ch: {
-        site: 'https://go.onelink.me/faIR/d588700',
-        title: '《第五人格》感谢祭活动',
-        description: '',
-        image: '',
-    }
-}
-const meta = metas['ja'];
+// const metas = {
+//     ja: {
+//         site: 'https://go.onelink.me/faIR/d588700',
+//         title: '大切な仲間たちへの感謝祭の手紙',
+//         description: '感謝の気持ちをいっぱい載せたこの手紙をぜひ読んでください！',
+//         image: '',
+//     },
+//     ch: {
+//         site: 'https://go.onelink.me/faIR/d588700',
+//         title: '《第五人格》感谢祭活动',
+//         description: '',
+//         image: '',
+//     }
+// }
+// const meta = metas['ja'];
+console.log(process.env)
 module.exports = {
     devServer: {
         proxy: 'http://h5api.chatbot.nie.163.com'
     },
     // pluginOptions: {
     //     htmlWebpackPlugin: {
-    //         metaSns: meta, 
-    //         // 'meta': {
-    //         //     'twitter:card': "summary_large_image",
-    //         //     'twitter:site': meta.site,
-    //         //     'twitter:title': meta.title,
-    //         //     'twitter:description': meta.description,
-    //         //     'twitter:image': meta.image,
-    //         //     'property': { 
-    //         //         'http-equiv': 'Content-Security-Policy', 
-    //         //         'content': 'default-src https:' 
-    //         //     },
-    //         // }
+    //         options: {
+    //             metaSns: meta, 
+    //         }
+            
+            // 'meta': {
+            //     'twitter:card': "summary_large_image",
+            //     'twitter:site': meta.site,
+            //     'twitter:title': meta.title,
+            //     'twitter:description': meta.description,
+            //     'twitter:image': meta.image,
+            //     'property': { 
+            //         'http-equiv': 'Content-Security-Policy', 
+            //         'content': 'default-src https:' 
+            //     },
+            // }
     //     }
     // }
 }

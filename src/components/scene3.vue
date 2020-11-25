@@ -57,7 +57,7 @@ import { userimages } from '../store/resouces';
       touchendHandler(e){
         let endY = e.changedTouches[0].pageY
         if(this.startY - endY > 50){
-          this.$router.push('/sceneB')
+          this.$router.push({path: '/scene4'})
         }
       }
     }
@@ -109,16 +109,4 @@ import { userimages } from '../store/resouces';
     transform: translate(1em, 0px);
     display: inline-block;
 }
-  .sceneA.bg-center{
-    background-size: 100% auto;
-  }
-  .sceneA > .sceneA-btn{
-    display: block;
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    bottom: 14.5px;
-    background-size: 100% auto;
-    transition: .6s all 1.6s;
-  }
 </style>
