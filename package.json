@@ -10,6 +10,8 @@
   "dependencies": {
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "http-proxy": "^1.18.1",
+    "node-static": "^0.7.11",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-i18n": "^8.22.1",
