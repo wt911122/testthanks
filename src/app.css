@@ -1,0 +1,129 @@
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+*{
+  box-sizing: border-box;
+}
+p {
+    margin: 0;
+}
+
+.container{
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+}
+
+.page{
+  color: white;
+  font-size: 36px;
+}
+.bg-center{
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center center;
+}
+
+.fadeIn-enter-active, .fadeIn-leave-active,
+.fadeIn-left-enter-active, .fadeIn-left-leave-active,
+.fadeIn-right-enter-active, .fadeIn-right-leave-active
+{
+  transition: 2s all;
+}
+.fadeIn-enter, .fadeIn-leave-to{
+  opacity: 0;
+  transform: translate(0, 12px);
+}
+
+.fadeIn-left-enter, .fadeIn-left-leave-to{
+  opacity: 0;
+  transform: translate(-12px, 0);
+}
+
+.fadeIn-right-enter, .fadeIn-right-leave-to{
+  opacity: 0;
+  transform: translate(12px, 0);
+}
+
+.exposure-enter-active, .exposure-leave-active{
+  transition: 0.5s ease-in all;
+}
+.exposure-enter, .exposure-leave-to{
+  background-color: #fff;
+  opacity: 0;
+}
+.exposure-mask{
+  background-color: #fff;
+}
+
+.shrink-enter-active, .shrink-leave-active{
+  transition: 0.5s ease-in all;
+  transform-origin: bottom right;
+}
+.shrink-enter{
+  transform: scale(1);
+}
+.shrink-enter-to{
+  transform: scale(0.2) translate(-30px, -20px);
+}
+
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+
+.button-download{
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient( 90deg, rgb(209,96,21) 0%, rgb(252,123,37) 100%);
+    box-shadow: 4.213px 5.59px 6px 0px rgba(18, 10, 10, 0.28);
+    width: 84px;
+    height: 34px;
+    z-index: 175;    
+}
+h1 {
+    font-size: 1.28em;
+}
+.t-b {
+    font-size: 1.28em;
+    color: #3b2218;
+}
+p {
+    font-size: 1em;
+    line-height: 1.8em;
+    color: #31302f;
+}
+p > em {
+    color: #8d2b18;
+    font: inherit;
+}
+
