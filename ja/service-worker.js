@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.cf0d1622fec6068b744451cc897f78b8.js"
+  "/precache-manifest.a5e207545ea9f4eaf71b7922144d2057.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "thanksgiving"});
