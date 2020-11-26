@@ -7,17 +7,17 @@
             <div class="letter-content"
                 style="padding: 0 50px;" v-html="resolveContent(scene1Content.p)"></div>
             <div class="bg-image letter-button t-b"
-                @click="$router.push({path:'/scene2'})"
+                v-on:touchend="$router.push({ path:'/scene2' })"
                 :style="`background-image: url(${require('../assets/scene1/button.png')});`">
                 <span>{{scene1Content.button}}</span>    
             </div>
         </div>
     </transition>
     
-    <transition name="fadeIn">
+    <!-- <transition name="fadeIn">
       <router-link tag="a" to="/scene2" v-if="sceneA" class="bg-center sceneA-btn"
       :style="`background-image: url(${require('../assets/arrow.png')});`"></router-link >
-    </transition>
+    </transition> -->
   </div>
 </template>
 <script type="text/javascript">
@@ -81,9 +81,9 @@ import { contents } from '../i18n';
   .sceneA > .sceneA-btn{
     display: block;
     width: 100%;
-    height: 50px;
+    height: 65px;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     background-size: 100% auto;
     transition: .6s all 1.6s;
   }

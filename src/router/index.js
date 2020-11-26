@@ -32,10 +32,11 @@ const routes = [
   },
 ]
 
-const router = new VueRouter({mode: 'hash', routes});
+const router = new VueRouter({mode: 'history', routes});
 const _push = router.push;
 router.push = (option, onComplete, onAbort) => {
     // TODO 自动加上query
+    console.log(option)
     if(typeof option !== 'string')
         option.query = Object.assign({}, router.currentRoute.query, option.query)
     _push.apply(router, [option, onComplete, onAbort]);

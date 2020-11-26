@@ -1,8 +1,32 @@
-html, body{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
+@media (orientation: landscape) {
+    html, body{
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    .container{
+        width: 100vw;
+        position: absolute;
+        overflow: hidden;
+        height: 216vw;
+    }
+}
+
+@media (orientation: portrait) {
+    html, body{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    .container{
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+    }
+      
 }
 
 *{
@@ -12,12 +36,7 @@ p {
     margin: 0;
 }
 
-.container{
-  width: 100%;
-  position: absolute;
-  overflow: hidden;
-  height: 100%;
-}
+
 
 .page{
   color: white;
