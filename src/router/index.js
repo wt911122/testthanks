@@ -32,7 +32,7 @@ const routes = [
   },
 ]
 
-const router = new VueRouter({mode: 'history', routes});
+const router = new VueRouter({mode: 'hash', routes});
 const _push = router.push;
 router.push = (option, onComplete, onAbort) => {
     // TODO 自动加上query
