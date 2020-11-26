@@ -17,6 +17,9 @@
             {{ headerContent.download }}
         </button>
     </div>
+    <div class="portrait-tip">
+
+    </div>
   </div>
 </template>
 
@@ -113,4 +116,22 @@ image{
     height: 50px;
     object-fit: contain;
 }
+
+@media (orientation: landscape) {
+    .portrait-tip {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: 999;
+      top: 0;
+      left: 0;
+    }
+}
+
+@media (orientation: portrait) {
+    .portrait-tip {
+      display: none;
+    }
+}
+
 </style>
